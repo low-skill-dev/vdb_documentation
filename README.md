@@ -1,3 +1,4 @@
+## Stack
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/luminodiode/rest2wireguard)
 [![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white)](https://www.alpinelinux.org)
 [![Wireguard](https://img.shields.io/badge/wireguard-%2388171A.svg?style=for-the-badge&logo=wireguard&logoColor=white)](https://www.wireguard.com)
@@ -12,6 +13,11 @@
 
 
 ## This repo contains russian description for the next projects (clickable):
-[![rest2wireguard](https://img.shields.io/badge/rest2wireguard-lightblue?style=for-the-badge)](https://github.com/LuminoDiode/rest2wireguard)
-[![rest2wireguard](https://img.shields.io/badge/vdb_main_server-red?style=for-the-badge)](https://github.com/LuminoDiode/vdb_main_server)
-[![rest2wireguard](https://img.shields.io/badge/vdb_web_client-lightgreen?style=for-the-badge)](https://github.com/LuminoDiode/vdb_web_client)
+[![ico](https://img.shields.io/badge/rest2wireguard-yellow?style=for-the-badge)](https://github.com/LuminoDiode/rest2wireguard)
+[![ico](https://img.shields.io/badge/vdb_main_server-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_main_server)
+[![ico](https://img.shields.io/badge/vdb_web_client-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_web_client)
+[![ico](https://img.shields.io/badge/vdb_desktop_client-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_desktop_client)
+
+## Introduction (in russian)
+В настоящем проекте выделяется несколько логических частей, которые можно выделить как по технологиям, так и по «бизнес-задачам». На текущем этапе они включают: VPN-сервера (т.н. ноды), главный сервер, сайт с информацией о проекте, клиентские приложения. Предполагаемой к использованию процедурой установления VPN-соединения предлагается следующее: клиент, после авторизации и получения JWT-токенов, регистрирует свой девайс на главном сервере, сообщая ему свой главный ключ, а также запрашивает список доступных нод; клиент запрашивает у главного сервера подключение к выбранной ноде; главный сервер, сначала удостоверившись, что клиент отключен от предыдущей ноды, проведя валидацию: проверив лимиты, соответствие уровня доступа пользователя запрашиваемой ноде и удостоверившись в доступности последней, передаёт ей публичный ключ пользователя; нода, после валидации ключа (с целью защиты от инъекций), выполняет его добавление, выделяет ему адрес в приватной сети, после чего возвращает главному серверу свой публичный ключ и выделенный адрес; главный сервер добавляет к полученному от ноды ответу IP-адрес ноды и порт, прослушиваемый сервером Wireguard, после чего возвращает всю полученную модель данных клиенту; клиент устанавливает Wireguard-туннель.
+
