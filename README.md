@@ -2,6 +2,7 @@
 [![ico](https://img.shields.io/badge/rest2wireguard-yellow?style=for-the-badge)](https://github.com/LuminoDiode/rest2wireguard)
 [![ico](https://img.shields.io/badge/vdb_main_server-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_main_server)
 [![ico](https://img.shields.io/badge/vdb_web_client-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_web_client)
+[![ico](https://img.shields.io/badge/rest2smtp-yellow?style=for-the-badge)](https://github.com/LuminoDiode/rest2smtp)
 [![ico](https://img.shields.io/badge/vdb_desktop_client-yellow?style=for-the-badge)](https://github.com/LuminoDiode/vdb_desktop_client)
 
 ## Stack
